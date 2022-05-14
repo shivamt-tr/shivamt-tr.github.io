@@ -365,7 +365,34 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Interests
+--------------------------------------------------------------*/
+.facts .icon-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  transition: ease-in-out 0.3s;
+}
+.facts .icon-box i {
+  font-size: 32px;
+  padding-right: 10px;
+  line-height: 1;
+}
+.facts .icon-box h3 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 16px;
+  color: #fff;
+}
+.facts .icon-box:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/*--------------------------------------------------------------
+# Skills
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
@@ -396,6 +423,31 @@ section {
   transition: 0.9s;
   background-color: #149ddd;
 }
+
+/*.skills .progress-bar-100 {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: #8fce00;
+}
+.skills .progress-bar-75 {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: #ce7e00;
+}
+.skills .progress-bar-50 {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: #134f5c;
+}
+.skills .progress-bar-25 {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: #f44336;
+}*/
 
 /*--------------------------------------------------------------
 # Resume
