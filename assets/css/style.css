@@ -663,7 +663,7 @@ section {
 }
 
 .project {
-  font-style: italic;
+  /*font-style: italic;*/
   margin: 0 15px 15px 15px;
   padding: 20px;
   background: #fff;
@@ -674,12 +674,14 @@ section {
 }
 
 .project h5 {
-  background: #149ddd;
+  background: #34abeb;
   color: #000;
 }
 
 .project p {
   color: #000;
+  font-size: 18px;
+  font-style: italic;
 }
 
 .project h3 {
@@ -690,6 +692,10 @@ section {
   width: 50%;
   height: auto;
   padding: 10px;
+}
+
+.project a{
+  text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
