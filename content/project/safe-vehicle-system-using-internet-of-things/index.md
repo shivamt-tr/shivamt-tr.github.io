@@ -1,27 +1,22 @@
 ---
-title: Robo Assistant X - Your Personal Chatbot
+title: Safe Vehicle System using Internet of Things
 date: 2023-11-26T07:58:24.220Z
-summary: In today's world, where artificial intelligence and robotics are
-  rapidly advancing, **Robot Assistant X** represents a significant step forward
-  in human-machine interaction. The project combines Natural Language Processing
-  (NLP) with robust hardware to create a user-friendly voice assistant robot.
-  The goal is to provide a tool that is not only efficient but also easy for
-  regular users to interact with.
+summary: The SAFE Vehicle system is an IoT based application that includes various functionalities like Drowsiness detection, driver temperature monitoring, face mask detection which is crucial in times of COVID-19 and seat belt fasten detection, alerting the driver if any detector detects the negligence, and also notifying the family members and rescue authorities if some mishap has happened despite all the safety measures with location and intensity of the accident.
 draft: false
 featured: false
 tags:
   - embedded
 links:
-  - url: https://github.com/atanuroy911/CS724-RoboX
+  - url: https://github.com/pranshu27/safe_car_falcon
     icon_pack: fab
     icon: github
     name: GitHub
 image:
-  filename: robox-thumb.png
+  filename: safe_vehicle.png
   focal_point: Smart
   preview_only: false
 ---
-**Robot Assistant X** is a voice assistant robot developed as a collaborative project. This document provides an overview of the project, including its design, methodology, implementation, and future plans.
+<!-- **Robot Assistant X** is a voice assistant robot developed as a collaborative project. This document provides an overview of the project, including its design, methodology, implementation, and future plans.
 
 ## Overview
 
@@ -97,4 +92,4 @@ In today's world, where artificial intelligence and robotics are rapidly advanci
 
 ## GitHub Repository
 
-For the latest updates and source code, visit our GitHub repository: [Robot Assistant X GitHub Repository](https://github.com/atanuroy911/CS724-RoboX)
+For the latest updates and source code, visit our GitHub repository: [Robot Assistant X GitHub Repository](https://github.com/atanuroy911/CS724-RoboX) -->

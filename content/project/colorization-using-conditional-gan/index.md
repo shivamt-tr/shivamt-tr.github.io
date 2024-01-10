@@ -1,21 +1,13 @@
 ---
-title: "Activity Classification & Prediction "
+title: "Image Colorization with conditional GANs"
 date: 2023-11-30T13:13:05.138Z
-summary: This project runs a activity classification model (Random
-  Forest/Decision Tree) on the cloud based on sensors deployed in a house (ARUBA
-  DATASET) and it predicts based on that. The actual setup of the sensors are
-  not done, so it's a simulated sensor setup that randomly takes sensor values
-  and according to timestamps and sends to the model to classify and hence
-  predict the activity done at that time using those virtual sensor data. This
-  project serves as a proof of concept that one can predict and monitor activity
-  over the internet through sensors while being away for tasks such as elderly
-  care monitoring
+summary: Building on the existing ‘pix2pix’ image-to-image translation model, we have performed several experiments to improve the colorization quality and build a colorization-specific framework.
 draft: false
 featured: false
 tags:
   - iot
 links:
-  - url: https://github.com/atanuroy911/activity_classification_sensors
+  - url: https://github.com/shivamt-tr/Image-Colorization-using-conditional-Generative-Adversarial-Networks
     name: GitHub
     icon_pack: fab
     icon: github
@@ -24,7 +16,7 @@ image:
   focal_point: Smart
   preview_only: false
 ---
-## Overview
+<!-- ## Overview
 
 This project runs a activity classification model (Random Forest/Decision Tree) on the cloud based on sensors deployed in a house (ARUBA DATASET) and it predicts based on that.
 
@@ -130,4 +122,4 @@ Ensure that an Android emulator or a physical device is connected.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE). -->

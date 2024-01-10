@@ -1,13 +1,7 @@
 ---
-title: Welding Defect Detection using improved YOLOv7 model
+title: Analyzing Various Factors Affecting Climate Change
 date: 2023-11-08T18:12:18.133Z
-summary: The proposed model in this paper uses an improved architecture of
-  YOLOv7-Tiny. The deployment of the defect detection model on a Raspberry Pi
-  allows for real-time detection and remote monitoring of welding defects. This
-  technology can be particularly useful in hazardous and remote locations where
-  manual inspection is difficult or impossible. The implementation of this model
-  can lead to significant cost savings, improved safety, and increased
-  productivity for industrial operations.
+summary: We analyze the common factors that cause climate change and draw useful inference from the data. The major factors include the emission of harmful geenhouse gases, rise in temperature of the earth’s surface, warming up of oceans, melting of glacier, rise in sea level, and how these factors lead to the increase in occurrence of climate anomalies and causes natural disasters.
 draft: false
 featured: true
 authors:
@@ -15,16 +9,16 @@ authors:
 tags:
   - iot
 links:
-  - url: https://github.com/atanuroy911/CS776-DLCV-Project-IITK
+  - url: https://github.com/shivamt-tr/Climate-Change-Analysis
     name: GitHub
     icon_pack: fab
     icon: github
 image:
-  filename: featured.jpg
+  filename: featured.png
   focal_point: Smart
   preview_only: false
 ---
-# Training Section
+<!-- # Training Section
 
 ## Training model on YOLOV7 based Architecture
 
@@ -153,3 +147,4 @@ FINAL TINY MODEL:
 ## Modded YOLOV7 Architectiure Inference Times on Raspberry Pi
 
 ![Results](https://github.com/atanuroy911/CS776-DLCV-Project-IITK/raw/main/git-assets/images/Picture%205.png "Model Results Inference")
+ -->

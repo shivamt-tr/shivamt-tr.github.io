@@ -18,8 +18,8 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: 'Indian Institute of Technology, Kanpur'
-    description: 'Atanu Shuvam Roy is a Masters student at IIT Kanpur. His research interests include Embedded Systems, Internet of Things (IoT) and HCI.'
-    twitter: 'atanuroy911'
+    description: 'Shivam Tripathi is a graduate research student at Indian Institute of Technology, Kanpur. My research interests are broadly computer vision and machine learning.'
+    twitter: 'shivam_tr'
   analytics:
     google_analytics: 'UA-49775633-2'
     baidu_tongji: ''
@@ -70,7 +70,7 @@ features:
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/atanuroy911/atanuroy911.github.io'
+    url: 'https://github.com/shivamt-tr/shivamt-tr.github.io'
     content_dir: content
     branch: main
   avatar:
@@ -79,7 +79,7 @@ features:
   comment:
     provider: ''
     disqus:
-      shortname: 'Atanu'
+      shortname: 'Shivam'
       show_count: true
     commento:
       url: ''

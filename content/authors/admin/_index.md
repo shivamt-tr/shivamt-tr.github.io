@@ -38,7 +38,7 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - course: MS (Research) in Computer Science and Engineering
+    - course: MS in Computer Science and Engineering
       institution: Indian Institute of Technology Kanpur
       year: 2024
     - course: BTech in Computer Science and Engineering

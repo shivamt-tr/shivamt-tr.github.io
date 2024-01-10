@@ -1,7 +1,7 @@
 ---
 # Leave the homepage title empty to use the site title
 title: ''
-date: 2022-10-24
+date: 2023-01-09
 type: landing
 
 sections:
@@ -39,7 +39,7 @@ sections:
   - block: about.biography
     id: about
     content:
-      title: Hey There
+      title: About me
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
   - block: skills
@@ -62,7 +62,7 @@ sections:
       #   Leave `date_end` empty if it's your current employer.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: Student Researcher
+        - title: Graduate Student
           company: Indian Institute of Technology Kanpur
           company_url: ''
           company_logo: iitk-logo
@@ -71,64 +71,81 @@ sections:
           date_end: ''
           # description: |2-
               
-        - title: Research Assistant
-          company: Robotics and Automation Research Lab (RARL)
+        - title: Research Intern
+          company: TensorTour Inc.
           company_url: ''
-          company_logo: rarl-black
-          location: Jiangxi, China
-          date_start: '2018-08-01'
-          date_end: '2022-12-30'
+          company_logo: tt_logo_thick
+          location: Remote
+          date_start: '2022-05-15'
+          date_end: '2022-07-15'
           # description: |2-
           #     Responsibilities include:
 
           #     * Analysing
           #     * Modelling
           #     * Deploying
+
+        - title: Research Intern
+          company: Indian Statistical Institute Kolkata
+          company_url: ''
+          company_logo: isi-kolkata-logo
+          location: Kolkata, India
+          date_start: '2019-01-08'
+          date_end: '2019-09-30'
+          # description: |2-
+          #     Responsibilities include:
+
+          #     * Analysing
+          #     * Modelling
+          #     * Deploying
+
     design:
       columns: '2'
-  - block: accomplishments
-    content:
-      # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
-      title: 'Accomplish&shy;ments'
-      subtitle:
-      # Date format: https://docs.hugoblox.com/customization/#date-format
-      date_format: Jan 2006
-      # Accomplishments.
-      #   Add/remove as many `item` blocks below as you like.
-      #   `title`, `organization`, and `date_start` are the required parameters.
-      #   Leave other parameters empty if not required.
-      #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
-      items:
-        - certificate_url: https://atanuroy911.github.io/static/uploads/programming-hero.pdf
-          date_end: ''
-          date_start: '2022-08-09'
-          description: ''
-          icon: programming-hero
-          organization: Programming Hero
-          organization_url: https://web.programming-hero.com/
-          title: Complete Web Development
-          url: ''
-        - certificate_url: https://www.coursera.org/account/accomplishments/specialization/certificate/XWWFL3BT84WV
-          date_end: ''
-          date_start: '2020-05-20'
-          description: ''
-          icon: coursera
-          organization: Coursera
-          organization_url: https://www.coursera.org
-          title: Google IT Support Specialization
-          url: https://www.coursera.org/professional-certificates/google-it-support
-        # - certificate_url: https://www.datacamp.com
-        #   date_end: '2020-12-21'
-        #   date_start: '2020-07-01'
-        #   description: ''
-        #   icon: datacamp
-        #   organization: DataCamp
-        #   organization_url: https://www.datacamp.com
-        #   title: 'Object-Oriented Programming in R'
-        #   url: ''
-    design:
-      columns: '2'
+  # Shivam - uncomment accomplishments block later
+  # - block: accomplishments
+  #   content:
+  #     # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
+  #     title: 'Accomplish&shy;ments'
+  #     subtitle:
+  #     # Date format: https://docs.hugoblox.com/customization/#date-format
+  #     date_format: Jan 2006
+  #     # Accomplishments.
+  #     #   Add/remove as many `item` blocks below as you like.
+  #     #   `title`, `organization`, and `date_start` are the required parameters.
+  #     #   Leave other parameters empty if not required.
+  #     #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
+  #     items:
+  #       - certificate_url: https://atanuroy911.github.io/static/uploads/programming-hero.pdf
+  #         date_end: ''
+  #         date_start: '2022-08-09'
+  #         description: ''
+  #         icon: programming-hero
+  #         organization: Programming Hero
+  #         organization_url: https://web.programming-hero.com/
+  #         title: Complete Web Development
+  #         url: ''
+  #       - certificate_url: https://www.coursera.org/account/accomplishments/specialization/certificate/XWWFL3BT84WV
+  #         date_end: ''
+  #         date_start: '2020-05-20'
+  #         description: ''
+  #         icon: coursera
+  #         organization: Coursera
+  #         organization_url: https://www.coursera.org
+  #         title: Google IT Support Specialization
+  #         url: https://www.coursera.org/professional-certificates/google-it-support
+  #       # - certificate_url: https://www.datacamp.com
+  #       #   date_end: '2020-12-21'
+  #       #   date_start: '2020-07-01'
+  #       #   description: ''
+  #       #   icon: datacamp
+  #       #   organization: DataCamp
+  #       #   organization_url: https://www.datacamp.com
+  #       #   title: 'Object-Oriented Programming in R'
+  #       #   url: ''
+  #   design:
+  #     columns: '2'
   
+  # Shivam - uncomment portfolio block later
   - block: portfolio
     id: projects
     content:
@@ -147,8 +164,8 @@ sections:
       buttons:
         - name: All
           tag: '*'
-        - name: Embedded Systems
-          tag: embedded
+        - name: Vision
+          tag: vision
         - name: Internet of Things
           tag: IoT
         - name: Other
@@ -195,31 +212,31 @@ sections:
   #     # Choose a layout view
   #     view: compact
   #     columns: '2'
-  - block: collection
-    id: featured
-    content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publication
-        featured_only: true
-    design:
-      columns: '2'
-      view: card
-  - block: collection
-    content:
-      title: Recent Publications
-      text: |-
-        {{% callout note %}}
-        Quickly discover relevant content by [filtering publications](./publication/).
-        {{% /callout %}}
-      filters:
-        folders:
-          - publication
-        exclude_featured: true
-    design:
-      columns: '2'
-      view: citation
+  # - block: collection
+  #   id: featured
+  #   content:
+  #     title: Featured Publications
+  #     filters:
+  #       folders:
+  #         - publication
+  #       featured_only: true
+  #   design:
+  #     columns: '2'
+  #     view: card
+  # - block: collection
+  #   content:
+  #     title: Recent Publications
+  #     text: |-
+  #       {{% callout note %}}
+  #       Quickly discover relevant content by [filtering publications](./publication/).
+  #       {{% /callout %}}
+  #     filters:
+  #       folders:
+  #         - publication
+  #       exclude_featured: true
+  #   design:
+  #     columns: '2'
+  #     view: citation
   # - block: collection
   #   id: talks
   #   content:
@@ -241,9 +258,9 @@ sections:
       title: Contact
       subtitle:
       text: |-
-        Send me an email if you want to contact me or have a collaboration or should there be any opportunities
+        Send me an email if you want to contact me
       # Contact (add or remove contact options as necessary)
-      email: atanuroy911@gmail.com
+      email: tripathi.shivam28@gmail.com
       # phone: 888 888 88 88
       # appointment_url: 'https://calendly.com'
       # address:
@@ -273,15 +290,15 @@ sections:
         - icon: instagram
           icon_pack: fab
           name: Follow Me
-          link: 'https://www.instagram.com/atanuroy911'
+          link: 'https://www.instagram.com/_shivam.tr'
         - icon: linkedin
           icon_pack: fab
           name: Connect with me
-          link: 'https://www.linkedin.com/in/atanu-shuvam-roy/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BDyKkTVA0T66Yjg4y5g%2BJWw%3D%3D'
+          link: 'https://www.linkedin.com/in/shivamtripathi28/'
         - icon: google
           icon_pack: fab
           name: More about me
-          link: 'https://sites.google.com/view/atanu-shuvam-roy'
+          link: ''
       # Automatically link email and phone or display as text?
       autolink: true
       # Email form provider
