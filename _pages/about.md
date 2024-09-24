@@ -8,13 +8,12 @@ redirect_from:
   - /about.html
 ---
 <div style="text-align: justify"> <p>
-I'm a graduate research student in the <a href="https://www.cse.iitk.ac.in">Computer Science and Engineering</a> department at <a href="https://www.iitk.ac.in">Indian Institute of Technology, Kanpur</a>. My research interests are broadly computer vision and machine learning. I am currently working on image generation & manipulation using multi-modal conditioning. For more details, please take a look at my <b><a href="/files/shivam_tripathi_resume_21_jan_2024.pdf">CV</a></b>.
+I am an MS (By Research) student in the department of <a href="https://www.cse.iitk.ac.in">Computer Science and Engineering</a> at Indian Institute of Technology, Kanpur (IIT Kanpur). I have recently joined as a Senior Engineer in the Visual Intelligence group at Samsung R&D Institute - Bangalore, India. For more details, please take a look at my <b><a href="/files/Shivam_Tripathi_Academic_CV_24_Sept_2024.pdf">CV</a></b>.
 </p>
 
-<p><strong>
-My research interest is computer vision, primarily focusing on audio-visual representation learning, image and video stylization, and generative models.
-<!-- , and 3D vision. -->
-</strong></p>
+<p>
+My research interest lies in Machine Learning and Computer Vision, I am particularly interested to work on multi-modal learning, representation learning, and creative image/video manipulation using generative AI. For my master's thesis I am working with <a href="https://grvsharma.com">Prof. Gaurav Sharma</a> on audio-guided face expression editing by leveraging the latent space of powerful generative models. 
+</p>
 
 </div>
 
@@ -25,6 +24,7 @@ My research interest is computer vision, primarily focusing on audio-visual repr
 	* Computer Science and Engineering (CSE), Indian Institute of Technology, Kanpur
 * <b><span style="color:Chocolate">Bachelor of Technology (BTech) | 2016-2020</span></b>
 	* Computer Science and Engineering (CSE), Pranveer Singh Institute of Technology (PSIT), Kanpur
+
 
 <!-- ## Experience
 

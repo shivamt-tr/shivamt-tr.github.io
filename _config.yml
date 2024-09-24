@@ -84,11 +84,11 @@ author:
   avatar           : "avatar.jpg"
   bio              : "Indian Institute of Technology, Kanpur"
   email            : "shivamtr[at]cse[dot]iitk[dot]ac[dot]in"
-  # location         : "Kanpur, India"
+  location         : "Kanpur, India"
   employer         :
   pubmed           : 
   # googlescholar    : "https://scholar.google.com/citations?user=E-2mKPsAAAAJ&hl=en"
-  email            :
+  # email            :
   # researchgate     :  "https://www.researchgate.net/profile/Atanu-Roy-8"
   uri              :
   bitbucket        :
