@@ -10,13 +10,13 @@ main:
   #   url: /teaching/    
     
   - title: "Projects"
-    url: / # /projects/
+    url: /projects/
         
   # - title: "Blog Posts"
   #   url: /year-archive/
     
   - title: "CV"
-    url: /files/Shivam_Tripathi_Academic_CV_24_Sept_2024.pdf
+    url: /files/Shivam_Tripathi_Academic_CV_9_Feb_2025.pdf
     
   # - title: "Guide"
   #   url: /markdown/
