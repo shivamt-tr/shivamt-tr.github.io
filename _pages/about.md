@@ -3,39 +3,118 @@ permalink: /
 title: ""
 excerpt: "About me"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
-<div style="text-align: justify"> <p>
-I'm a graduate research student in the <a href="https://www.cse.iitk.ac.in">Computer Science and Engineering</a> department at <a href="https://www.iitk.ac.in">Indian Institute of Technology, Kanpur</a>. My research interests are broadly computer vision and machine learning. I am currently working on image generation & manipulation using multi-modal conditioning. For more details, please take a look at my <b><a href="/files/shivam_tripathi_resume_21_jan_2024.pdf">CV</a></b>.
-</p>
 
-<p><strong>
-My research interest is computer vision, primarily focusing on audio-visual representation learning, image and video stylization, and generative models.
-<!-- , and 3D vision. -->
-</strong></p>
+<div style="text-align: justify">
+
+I am currently a Research Assistant at the <a href="https://val.cds.iisc.ac.in/">Vision and AI Lab (VAL)</a>, Indian Institute of Science (IISc), Bangalore, where I work under the supervision of <a href="https://cds.iisc.ac.in/faculty/venky/">Prof. Venkatesh Babu</a>. My current research focuses on evaluating and improving the physical grounding of foundation video models. I am also interested in multi-modal generation, editing, and personalization.
+
+Previously, I worked as a Senior Engineer at Samsung R&D Institute India, Bangalore. I completed my MS (By Research) in Computer Science and Engineering from Indian Institute of Technology, Kanpur <a href="https://www.iitk.ac.in/">(IIT Kanpur)</a>, and my undergraduate studies in Computer Science from <a href="https://www.psit.ac.in/">PSIT Kanpur</a>.
+
+Outside research, I enjoy playing guitar and singing.
+
+For more details, please see my <a href="/files/Shivam_Tripathi_CV.pdf"><b>CV</b></a>.
+
+</div>
+
+## News
+
+- **[Mar 2026]** Our paper *Objects in Generated Videos Are Slower Than They Appear* was accepted to [**CVPR 2026 Findings**](https://arxiv.org/abs/2512.02016).
+- **[May 2025]** Joined the Vision and AI Lab ([VAL](https://val.cds.iisc.ac.in/)), IISc Bangalore as a Research Assistant under Prof. R. Venkatesh Babu.
+- **[July 2024]** Joined Samsung R&D Institute Bangalore as Senior Engineer (Research).
+
+<!-- ## Publications
+
+* **Principia: Relational Physics Tests for Video Models**  
+  *(under review)*  
+  Varun Varma Thozhiyoor, **Shivam Tripathi**, R. Venkatesh Babu, Anand Bhattad
+  [[arXiv](#)] [[Project Page](#)]
+
+* **Objects in Generated Videos Are Slower Than They Appear**  
+  *CVPR Findings 2026*  
+  Varun Varma Thozhiyoor, **Shivam Tripathi**, R. Venkatesh Babu, Anand Bhattad
+  [[Paper](https://arxiv.org/abs/2512.02016)] [[Project Page](https://gravity-eval.github.io/)] -->
+
+## Publications
+
+<div style="display:flex; gap:20px; margin-bottom:30px; align-items:center;">
+
+  <div style="min-width:240px;">
+    <img src="/images/principia_teaser.png" width="240" style="border-radius:10px;">
+  </div>
+
+  <div>
+
+    <h3 style="margin-top:0;">Principia: Relational Physics Tests for Video Models</h3>
+
+    <p><em>(under review)</em></p>
+
+    <p>
+      Varun Varma Thozhiyoor, <strong>Shivam Tripathi</strong>,
+      R. Venkatesh Babu, Anand Bhattad
+    </p>
+
+    <p>
+      arXiv (soon) |
+      Project Page (soon)
+    </p>
+
+  </div>
 
 </div>
 
 
-## Education
+<div style="display:flex; gap:20px; margin-bottom:30px; align-items:center;">
 
-* <b><span style="color:Chocolate">MS (By Research) | 2021-2024</span></b>
-	* Computer Science and Engineering (CSE), Indian Institute of Technology, Kanpur
-* <b><span style="color:Chocolate">Bachelor of Technology (BTech) | 2016-2020</span></b>
-	* Computer Science and Engineering (CSE), Pranveer Singh Institute of Technology (PSIT), Kanpur
+  <div style="min-width:240px;">
+
+    <video
+        width="240"
+        height="180"
+        autoplay
+        loop
+        muted
+        playsinline
+        controls
+        style="border-radius:10px; object-fit:cover;"
+    >
+        <source src="/images/gravity_teaser.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+  <div>
+
+    <h3 style="margin-top:0;">Objects in Generated Videos Are Slower Than They Appear</h3>
+
+    <p><strong>CVPR Findings 2026</strong></p>
+
+    <p>
+      Varun Varma Thozhiyoor, <strong>Shivam Tripathi</strong>,
+      R. Venkatesh Babu, Anand Bhattad
+    </p>
+
+    <p>
+      <a href="https://arxiv.org/abs/2512.02016">Paper</a> |
+      <a href="https://gravity-eval.github.io/">Project Page</a>
+    </p>
+
+  </div>
+
+</div>
 
 <!-- ## Experience
 
+### Research Assistant
+**Vision and AI Lab (VAL), IISc Bangalore**  
+*May 2025 – Present*
 
-* <b><span style="color:Chocolate">Indian Institute of Technology, Kanpur</span></b>
-	* Student Researcher at IoT Vision Lab (Oct. 2022 - Present)
-	* Working under Dr. Priyanka Bagade
-* <b><span style="color:Chocolate">Jiangxi University of Science and Technology</span></b>
-	* Chief Tech Expert at Robotics and Automation Research Lab (RARL)
-	* Research Assistant under Dr. Ata Jahangir Moshayedi (Aug. 2018 - Dec. 2021)
- -->
+### Senior Engineer (Research)
+**Samsung R&D Institute Bangalore**  
+*July 2024 – April 2025* -->
 
 <!-- <div><center>
 <img style="height:50px" src="images/jxust.png"/>
