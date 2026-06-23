@@ -141,21 +141,20 @@
 
     /* social icon row */
     .social-links {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       gap: .4rem;
       margin-bottom: 1.1rem;
     }
     .social-links a {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: .32rem;
       font-size: .74rem;
       color: var(--ink-muted);
       border: 1px solid var(--rule);
       border-radius: 4px;
-      padding: .3rem .4rem;
+      padding: .3rem .6rem;
       transition: color .15s, border-color .15s;
       white-space: nowrap;
     }
@@ -165,10 +164,6 @@
       text-decoration: none;
     }
     .social-links i { font-size: .82rem; flex-shrink: 0; }
-    /* scholar spans full width */
-    .social-links a.full-width {
-      grid-column: 1 / -1;
-    }
 
     .cv-btn {
       display: flex;
@@ -215,14 +210,18 @@
     .news-list { list-style: none; }
     .news-list li {
       display: flex;
+      align-items: center;
       gap: .8rem;
-      padding: .55rem 0;
+      padding: .6rem 0;
       border-bottom: 1px solid var(--rule);
       font-size: .87rem;
+      min-height: 2.6rem;
     }
     .news-list li:last-child { border-bottom: none; }
     .news-tag {
       flex-shrink: 0;
+      width: 5.5rem;
+      text-align: center;
       font-size: .7rem;
       font-weight: 500;
       letter-spacing: .04em;
@@ -230,10 +229,10 @@
       border: 1px solid var(--rule);
       border-radius: 3px;
       padding: .18rem .48rem;
-      height: fit-content;
-      margin-top: .2rem;
       white-space: nowrap;
+      align-self: center;
     }
+    .news-list span { line-height: 1.5; }
     .news-list a { color: var(--accent); }
 
     /* ─── Publication cards ───────────────────────────────── */
@@ -248,7 +247,10 @@
       background: var(--surface);
       cursor: pointer;
       align-items: start;
+      height: 240px;
+      overflow: hidden;
       transition: transform .2s ease, box-shadow .2s ease;
+      position: relative;
     }
     .pub-card.portrait-card {
       grid-template-columns: 135px 1fr;
@@ -259,19 +261,56 @@
     }
     .pub-card:last-child { margin-bottom: 0; }
 
+    /* click hint badge */
+    .pub-click-hint {
+      position: absolute;
+      bottom: .7rem;
+      right: .8rem;
+      font-size: .65rem;
+      font-weight: 500;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      opacity: 0;
+      transition: opacity .2s ease;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: .3rem;
+    }
+    .pub-click-hint::before {
+      content: '';
+      display: inline-block;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: .6;
+    }
+    .pub-card:hover .pub-click-hint { opacity: 1; }
+
     .pub-thumb {
       border-radius: 6px;
       overflow: hidden;
       border: 1px solid var(--rule);
       background: #edeae3;
       flex-shrink: 0;
-      width: 200px;
-      max-height: 150px;
+      align-self: stretch;
+      min-height: 0;
     }
     .pub-thumb.portrait {
       width: 135px;
-      max-height: none;
-      aspect-ratio: 3/4;
+      height: 210px;
+      align-self: start;
+    }
+    /* ── Landscape thumbnail card (Principia) ── */
+    .pub-card.landscape-card {
+      grid-template-columns: 240px 1fr;
+    }
+    .pub-thumb.landscape {
+      height: 210px;
+    }
+    .pub-thumb.landscape img {
+      object-position: center;
     }
     .pub-thumb img {
       width: 100%;
@@ -511,8 +550,9 @@
         align-items: start;
       }
       .profile-photo { width: 110px; height: 110px; margin-bottom: 0; }
-      .pub-card { grid-template-columns: 1fr; }
+      .pub-card { grid-template-columns: 1fr; height: auto; overflow: visible; }
       .pub-thumb { width: 100%; aspect-ratio: 16/9; }
+      .pub-thumb.landscape { height: auto; aspect-ratio: 16/9; }
       .nav-links { gap: 1rem; }
     }
     @media (max-width: 480px) {
@@ -542,7 +582,7 @@
 
       <!-- ── SIDEBAR ───────────────────────────────────────── -->
       <aside>
-        <img class="profile-photo" src="assets/profile/profile.jpg" alt="Shivam Tripathi"
+        <img class="profile-photo" src="assets/profile/profile.jpeg" alt="Shivam Tripathi"
           onerror="this.src='https://via.placeholder.com/160x160/dedad3/6b6860?text=ST'" />
 
         <div class="profile-info">
@@ -558,7 +598,7 @@
           </div>
 
           <div class="social-links">
-            <a href="https://scholar.google.com/citations?user=rIRuxRUAAAAJ&hl=en" target="_blank" rel="noopener" class="full-width">
+            <a href="https://scholar.google.com/citations?user=rIRuxRUAAAAJ&hl=en" target="_blank" rel="noopener">
               <i class="fas fa-graduation-cap"></i> Google Scholar
             </a>
             <a href="https://github.com/shivamt-tr" target="_blank" rel="noopener">
@@ -568,7 +608,7 @@
               <i class="fab fa-linkedin"></i> LinkedIn
             </a>
             <a href="https://x.com/shivam_tr" target="_blank" rel="noopener">
-              <i class="fab fa-x-twitter"></i> X
+              <svg width="12" height="12" viewBox="0 0 1200 1227" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.163 519.284ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.828Z"/></svg> X
             </a>
           </div>
 
@@ -633,11 +673,11 @@
 
         <!-- Publications -->
         <section id="publications" class="reveal">
-          <h2 class="section-label">Publications</h2>
+          <h2 class="section-label">Publications <span style="font-size:.7rem;font-weight:400;font-family:var(--font-body);color:var(--ink-muted);letter-spacing:.04em;text-transform:uppercase;vertical-align:middle;margin-left:.5rem;">· click cards to expand</span></h2>
 
           <!-- Card: Principia -->
-          <div class="pub-card" data-pub="principia" role="button" tabindex="0" aria-label="View Principia paper details">
-            <div class="pub-thumb">
+          <div class="pub-card landscape-card" data-pub="principia" role="button" tabindex="0" aria-label="View Principia paper details">
+            <div class="pub-thumb landscape">
               <img src="assets/publications/principia/overview.png" alt="Principia overview"
                 onerror="this.style.display='none'" />
             </div>
@@ -658,6 +698,7 @@
                 <a class="pub-link disabled" href="#" aria-disabled="true">Project (soon)</a>
               </div>
             </div>
+            <span class="pub-click-hint">Click to expand</span>
           </div>
 
           <!-- Card: Gravity / CVPR -->
@@ -688,6 +729,7 @@
                 </a>
               </div>
             </div>
+            <span class="pub-click-hint">Click to expand</span>
           </div>
 
         </section>
