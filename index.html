@@ -200,7 +200,7 @@
     /* ─── About ───────────────────────────────────────────── */
     .about-text p {
       font-size: .93rem;
-      color: #2e2c28;
+      color: var(--ink);
       margin-bottom: .85rem;
       text-align: justify;
     }
@@ -355,7 +355,7 @@
 
     .pub-tldr {
       font-size: .82rem;
-      color: #3a3832;
+      color: var(--ink);
       margin-bottom: .6rem;
       line-height: 1.55;
     }
@@ -489,7 +489,7 @@
     }
     .modal-abstract {
       font-size: .88rem;
-      color: #2e2c28;
+      color: var(--ink);
       line-height: 1.7;
       text-align: justify;
       margin-bottom: 1rem;
@@ -521,7 +521,52 @@
     .modal-link.primary:hover { background: var(--accent-warm); border-color: var(--accent-warm); }
     .modal-link.disabled { pointer-events: none; opacity: .4; }
 
-    /* ─── Footer ──────────────────────────────────────────── */
+    .modal-bibtex {
+      margin-top: .8rem;
+      border-top: 1px solid var(--rule);
+      padding-top: .8rem;
+    }
+    .modal-bibtex-label {
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: .4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .bibtex-copy-btn {
+      background: none;
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: .68rem;
+      font-weight: 500;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      padding: .18rem .5rem;
+      display: flex;
+      align-items: center;
+      gap: .3rem;
+      transition: color .15s, border-color .15s;
+    }
+    .bibtex-copy-btn:hover { color: var(--accent); border-color: var(--accent); }
+    .bibtex-copy-btn.copied { color: #3a9e6e; border-color: #3a9e6e; }
+    .modal-bibtex pre {
+      font-family: 'Courier New', monospace;
+      font-size: .73rem;
+      line-height: 1.6;
+      color: var(--ink-muted);
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      border-radius: 5px;
+      padding: .75rem 1rem;
+      overflow-x: auto;
+      white-space: pre;
+    }
     footer {
       border-top: 1px solid var(--rule);
       text-align: center;
@@ -530,7 +575,51 @@
       color: var(--ink-muted);
     }
 
-    /* ─── Scroll reveal ───────────────────────────────────── */
+    /* ─── Dark mode ───────────────────────────────────────── */
+    [data-theme="dark"] {
+      --bg:          #141318;
+      --surface:     #1e1c23;
+      --ink:         #ede9e0;
+      --ink-muted:   #9b9790;
+      --rule:        #2e2c35;
+      --accent:      #89b4e8;
+      --accent-warm: #d4845a;
+    }
+    [data-theme="dark"] header {
+      background: rgba(20,19,24,.94);
+    }
+    [data-theme="dark"] .modal-backdrop {
+      background: rgba(0,0,0,.72);
+    }
+    [data-theme="dark"] .modal {
+      background: var(--surface);
+    }
+    [data-theme="dark"] .pub-card {
+      background: var(--surface);
+    }
+    [data-theme="dark"] .pub-venue {
+      background: rgba(137,180,232,.12);
+    }
+    [data-theme="dark"] .pub-venue.under-review {
+      background: rgba(155,151,144,.12);
+    }
+
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      cursor: pointer;
+      color: var(--ink-muted);
+      font-size: .9rem;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color .15s, border-color .15s;
+      flex-shrink: 0;
+    }
+    .theme-toggle:hover { color: var(--ink); border-color: var(--ink-muted); }
     .reveal {
       opacity: 0;
       transform: translateY(16px);
@@ -550,9 +639,16 @@
         align-items: start;
       }
       .profile-photo { width: 110px; height: 110px; margin-bottom: 0; }
-      .pub-card { grid-template-columns: 1fr; height: auto; overflow: visible; }
-      .pub-thumb { width: 100%; aspect-ratio: 16/9; }
-      .pub-thumb.landscape { height: auto; aspect-ratio: 16/9; }
+      .pub-card {
+        grid-template-columns: 1fr;
+        height: auto;
+        overflow: visible;
+      }
+      .pub-card.landscape-card { grid-template-columns: 1fr; }
+      .pub-card.portrait-card  { grid-template-columns: 1fr; }
+      .pub-thumb         { width: 100%; height: 180px; aspect-ratio: unset; }
+      .pub-thumb.landscape { width: 100%; height: 160px; }
+      .pub-thumb.portrait  { width: 100%; height: 200px; }
       .nav-links { gap: 1rem; }
     }
     @media (max-width: 480px) {
@@ -564,7 +660,8 @@
 </head>
 <body>
 
-  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="e2c3b60b-f8a7-46ba-8ac0-2bf71fafd477"></script>
   <header>
     <nav>
       <span class="nav-brand">Shivam Tripathi</span>
@@ -573,6 +670,9 @@
         <li><a href="#news">News</a></li>
         <li><a href="#publications">Publications</a></li>
       </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <i class="fas fa-moon" id="theme-icon"></i>
+      </button>
     </nav>
   </header>
 
@@ -738,7 +838,7 @@
   </div>
 
   <footer>
-    &copy; 2026 Shivam Tripathi
+    &copy; 2026 Shivam Tripathi &nbsp;·&nbsp; Design assisted by <a href="https://claude.ai" target="_blank" rel="noopener" style="color:var(--ink-muted);text-decoration:underline;text-underline-offset:2px;">Claude</a>
   </footer>
 
   <!-- ── MODAL ──────────────────────────────────────────────── -->
@@ -759,6 +859,15 @@
         <div class="modal-abstract-label">Abstract</div>
         <div class="modal-abstract" id="modal-abstract"></div>
         <div class="modal-links" id="modal-links"></div>
+        <div class="modal-bibtex" id="modal-bibtex">
+          <div class="modal-bibtex-label">
+            <span>BibTeX</span>
+            <button class="bibtex-copy-btn" id="bibtex-copy-btn">
+              <i class="fas fa-copy" style="font-size:.75em;"></i> Copy
+            </button>
+          </div>
+          <pre id="modal-bibtex-text"></pre>
+        </div>
       </div>
     </div>
   </div>
@@ -782,6 +891,13 @@
         { text: 'inverse failure profiles', em: true },
       ],
       tldr: 'Modern video generators produce visually realistic motion, but fail surprisingly simple Newtonian physics tests. <b>Principia</b> evaluates physics using <em>calibration-independent relational constraints</em> between paired objects and finds that <b>no evaluated generator exceeds 0.5</b> physical consistency despite all scoring <b>above 0.7 on VBench</b>.',
+      bibtex: `@InProceedings{Thozhiyoor_2026_Principia,
+    author    = {Thozhiyoor, Varun Varma and Tripathi, Shivam and
+                 Radhakrishnan, Venkatesh Babu and Bhattad, Anand},
+    title     = {Principia: Relational Physics Tests for Video Models},
+    booktitle = {Under Review},
+    year      = {2026}
+}`,
       teaser: 'assets/publications/principia/teaser.mp4',
       links: [
         { label: 'arXiv (soon)', href: '#', disabled: true },
@@ -805,6 +921,18 @@
         { text: 'zero-shot', bold: true },
       ],
       tldr: 'Video diffusion models exhibit <em>"sub-Earth" gravity</em> — objects fall up to <b>4× slower</b> than physics dictates. A <em>unit-free two-object protocol</em> isolates this bias without calibration, and a lightweight <em>LoRA fine-tuned on just 100 clips</em> raises effective gravity from <b>1.81 → 6.43 m/s²</b> (<b>65%</b> of Earth\'s g).',
+      bibtex: `@InProceedings{Thozhiyoor_2026_CVPR,
+    author    = {Thozhiyoor, Varun Varma and Tripathi, Shivam and
+                 Radhakrishnan, Venkatesh Babu and Bhattad, Anand},
+    title     = {Objects in Generated Videos Are Slower Than They Appear:
+                 Models Suffer Sub-Earth Gravity and Don't Know
+                 Galileo's Principle...for now},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer
+                 Vision and Pattern Recognition (CVPR) Findings},
+    month     = {June},
+    year      = {2026},
+    pages     = {3830--3839}
+}`,
       teaser: 'assets/publications/gravity/teaser.png',
       links: [
         { label: 'Paper', href: 'https://arxiv.org/abs/2512.02016', icon: 'fas fa-file-pdf', primary: true },
@@ -863,6 +991,19 @@
       return `<a class="${cls}" href="${l.href}"${attr}>${icon}${l.label}</a>`;
     }).join('');
 
+    document.getElementById('modal-bibtex-text').textContent = p.bibtex || '';
+
+    const copyBtn = document.getElementById('bibtex-copy-btn');
+    copyBtn.onclick = () => {
+      navigator.clipboard.writeText(p.bibtex || '').then(() => {
+        copyBtn.innerHTML = '<i class="fas fa-check" style="font-size:.75em;"></i> Copied!';
+        copyBtn.classList.add('copied');
+        setTimeout(() => {
+          copyBtn.innerHTML = '<i class="fas fa-copy" style="font-size:.75em;"></i> Copy';
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      });
+    };
     backdrop.classList.add('open');
     document.body.style.overflow = 'hidden';
     document.getElementById('modal-close').focus();
@@ -882,7 +1023,23 @@
     card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openModal(card.dataset.pub); });
   });
 
-  // ── Scroll-spy ────────────────────────────────────────────
+  // ── Dark mode ─────────────────────────────────────────────
+  (function () {
+    const btn  = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    const saved = localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+    function setTheme(t) {
+      document.documentElement.setAttribute('data-theme', t);
+      icon.className = t === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      localStorage.setItem('theme', t);
+    }
+    setTheme(saved);
+    btn.addEventListener('click', () => {
+      setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
+  })();
   (function () {
     const links = document.querySelectorAll('.nav-links a');
     const sections = Array.from(links).map(a => document.querySelector(a.getAttribute('href')));
