@@ -103,7 +103,7 @@
     aside { position: sticky; top: 72px; }
 
     .profile-photo {
-      width: 160px; height: 160px;
+      width: 210px; height: 210px;
       border-radius: 50%;
       object-fit: cover;
       object-position: top center;
@@ -115,28 +115,40 @@
       font-size: 1.25rem;
       font-weight: 500;
       line-height: 1.2;
-      margin-bottom: .2rem;
+      margin-bottom: .35rem;
+    }
+    .profile-role {
+      font-size: .68rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .15rem;
     }
     .profile-affil {
-      font-size: .76rem;
-      color: var(--ink-muted);
-      line-height: 1.6;
-      margin-bottom: .75rem;
+      font-size: .8rem;
+      color: var(--ink);
+      line-height: 1.5;
+      margin-bottom: .7rem;
     }
+    .profile-affil a { color: inherit; }
+    .profile-affil a:hover { color: var(--accent); text-decoration: none; }
+    .profile-affil .sep { color: var(--ink-muted); margin: 0 .3em; }
 
     /* email display */
     .profile-email {
-      font-size: .74rem;
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .76rem;
       color: var(--ink-muted);
       margin-bottom: 1rem;
-      word-break: break-all;
       line-height: 1.5;
     }
+    .profile-email i { font-size: .72rem; flex-shrink: 0; }
     .profile-email span {
-      font-family: 'Courier New', monospace;
-      font-size: .73rem;
-      color: var(--ink);
       user-select: all;
+      overflow-wrap: anywhere;
     }
 
     /* social icon row */
@@ -638,7 +650,7 @@
         gap: 1rem;
         align-items: start;
       }
-      .profile-photo { width: 110px; height: 110px; margin-bottom: 0; }
+      .profile-photo { width: 140px; height: 140px; margin-bottom: 0; }
       .pub-card {
         grid-template-columns: 1fr;
         height: auto;
@@ -655,6 +667,7 @@
       aside { grid-template-columns: 1fr; text-align: center; }
       .profile-photo { margin: 0 auto; }
       .social-links { justify-items: center; }
+      .profile-email { justify-content: center; }
     }
   </style>
 </head>
@@ -687,14 +700,14 @@
 
         <div class="profile-info">
           <div class="profile-name">Shivam Tripathi</div>
+          <div class="profile-role">PhD Student</div>
           <div class="profile-affil">
-            Research Assistant<br />
-            Vision &amp; AI Lab (VAL)<br />
-            IISc, Bangalore
+            <a href="https://astra-vision.github.io/" target="_blank" rel="noopener">Astra-Vision</a><span class="sep">·</span><a href="https://www.inria.fr/fr/centre-inria-de-paris" target="_blank" rel="noopener">Inria Paris</a>
           </div>
 
           <div class="profile-email">
-            <span>tripathi.shivam28[at]gmail.com</span>
+            <i class="fas fa-envelope"></i>
+            <span>shivam.tripathi[at]inria.fr</span>
           </div>
 
           <div class="social-links">
@@ -726,20 +739,26 @@
           <h2 class="section-label">About</h2>
           <div class="about-text">
             <p>
-              I am a Research Assistant at the
-              <a href="https://val.cds.iisc.ac.in/" target="_blank" rel="noopener">Vision and AI Lab (VAL)</a>,
-              Indian Institute of Science (IISc), Bangalore, advised by
-              <a href="https://cds.iisc.ac.in/faculty/venky/" target="_blank" rel="noopener">Prof. R. Venkatesh Babu</a>.
-              My research focuses on evaluating and improving the physical grounding of video generation models —
-              particularly their ability to simulate real-world Newtonian dynamics. I am also broadly interested
-              in multi-modal generation, editing, and personalization.
+              I am a PhD student at
+              <a href="https://www.inria.fr/fr/centre-inria-de-paris" target="_blank" rel="noopener">Inria Paris</a>
+              in the
+              <a href="https://astra-vision.github.io/" target="_blank" rel="noopener">Astra-Vision</a>
+              group, advised by
+              <a href="https://rdecharette.github.io/" target="_blank" rel="noopener">Raoul de Charette</a> and
+              <a href="https://fabvio.github.io/" target="_blank" rel="noopener">Fabio Pizzati</a>.
+              My research focuses on physics-aware world models: making video generation models encode
+              physical properties and simulate real-world dynamics.
             </p>
             <p>
-              Before this, I was a Senior Engineer at Samsung R&amp;D Institute India, Bangalore.
-              I completed my MS (By Research) in Computer Science and Engineering from
+              Before this, I was a Research Assistant at the
+              <a href="https://val.cds.iisc.ac.in/" target="_blank" rel="noopener">Vision and AI Lab (VAL)</a>,
+              Indian Institute of Science (IISc), Bangalore, advised by
+              <a href="https://cds.iisc.ac.in/faculty/venky/" target="_blank" rel="noopener">R. Venkatesh Babu</a>,
+              and prior to that a Senior Engineer at Samsung R&amp;D Institute Bangalore.
+              I completed my MS (By Research) in Computer Science and Engineering at
               <a href="https://www.iitk.ac.in/" target="_blank" rel="noopener">IIT Kanpur</a>,
-              advised by <a href="https://www.cse.iitk.ac.in/users/gs/" target="_blank" rel="noopener">Prof. Gaurav Sharma</a>,
-              where my thesis work focused on audio-guided facial expression editing using StyleGAN.
+              advised by <a href="https://www.cse.iitk.ac.in/users/gs/" target="_blank" rel="noopener">Gaurav Sharma</a>,
+              where my thesis focused on audio-guided facial expression editing using StyleGAN.
             </p>
             <p>Outside research, I enjoy playing guitar 🎸 and singing 🎵.</p>
           </div>
@@ -749,6 +768,25 @@
         <section id="news" class="reveal">
           <h2 class="section-label">News</h2>
           <ul class="news-list">
+            <li>
+              <span class="news-tag">Oct 2026</span>
+              <span>
+                🚀 Started my PhD at
+                <a href="https://www.inria.fr/fr/centre-inria-de-paris" target="_blank" rel="noopener">Inria Paris</a>
+                (<a href="https://astra-vision.github.io/" target="_blank" rel="noopener">Astra-Vision</a>)
+                on physics-aware world models, with
+                <a href="https://rdecharette.github.io/" target="_blank" rel="noopener">Raoul de Charette</a> and
+                <a href="https://fabvio.github.io/" target="_blank" rel="noopener">Fabio Pizzati</a>.
+              </span>
+            </li>
+            <li>
+              <span class="news-tag">Sep 2026</span>
+              <span>
+                🎉 <a href="https://principiabench.github.io/" target="_blank" rel="noopener" style="color:var(--ink);font-style:italic;text-decoration:underline;text-underline-offset:2px;">Principia: Relational Physics Tests for Video Models</a>
+                was accepted to
+                <strong style="color:var(--accent);">NeurIPS 2026 Evaluations &amp; Datasets Track</strong>.
+              </span>
+            </li>
             <li>
               <span class="news-tag">Mar 2026</span>
               <span>
@@ -761,7 +799,7 @@
               <span class="news-tag">May 2025</span>
               <span>
                 Joined the <a href="https://val.cds.iisc.ac.in/" target="_blank" rel="noopener">Vision &amp; AI Lab</a>,
-                IISc Bangalore as a Research Assistant.
+                Indian Institute of Science (IISc), Bangalore as a Research Assistant.
               </span>
             </li>
             <li>
@@ -783,7 +821,7 @@
             </div>
             <div class="pub-body">
               <div class="pub-title">Principia: Relational Physics Tests for Video Models</div>
-              <span class="pub-venue under-review">Under Review</span>
+              <span class="pub-venue">NeurIPS 2026 E&amp;D Track</span>
               <div class="pub-authors">
                 Varun Varma Thozhiyoor<sup>*</sup>, <strong>Shivam Tripathi</strong><sup>*</sup>,
                 R. Venkatesh Babu, Anand Bhattad
@@ -794,8 +832,12 @@
                 Modern video generators fail surprisingly simple Newtonian physics tests. <strong>Principia</strong> uses <em>calibration-independent relational constraints</em> and finds <strong>no generator exceeds 0.5</strong> physical consistency despite all scoring <strong>&gt;0.7 on VBench</strong>.
               </div>
               <div class="pub-links" onclick="event.stopPropagation()">
-                <a class="pub-link disabled" href="#" aria-disabled="true">arXiv (soon)</a>
-                <a class="pub-link disabled" href="#" aria-disabled="true">Project (soon)</a>
+                <a class="pub-link" href="https://arxiv.org/abs/2609.04200" target="_blank" rel="noopener">
+                  <i class="fas fa-file-pdf" style="font-size:.8em;"></i> Paper
+                </a>
+                <a class="pub-link" href="https://principiabench.github.io/" target="_blank" rel="noopener">
+                  <i class="fas fa-globe" style="font-size:.8em;"></i> Project Page
+                </a>
               </div>
             </div>
             <span class="pub-click-hint">Click to expand</span>
@@ -877,8 +919,8 @@
   const PUBS = {
     principia: {
       title: 'Principia: Relational Physics Tests for Video Models',
-      venue: 'Under Review',
-      venueClass: 'pub-venue under-review',
+      venue: 'NeurIPS 2026 E&amp;D Track',
+      venueClass: 'pub-venue',
       authors: 'Varun Varma Thozhiyoor<sup>*</sup>, <strong>Shivam Tripathi</strong><sup>*</sup>, R. Venkatesh Babu, Anand Bhattad<br><small style="color:var(--ink-muted)"><sup>*</sup>Equal contribution</small>',
       abstract: `Evaluating physical reasoning in video models is difficult because absolute motion measurements depend on frame rate, object scale, and camera calibration, all of which are often ambiguous or unavailable in generated video. We propose a different approach. When two objects in the same scene obey the same physical law, their motions must satisfy predictable relationships, and these relationships hold independent of calibration. We introduce Principia, a benchmark that evaluates Newtonian physics through relational consistency between paired objects. Principia spans eight phenomena — gravity, restitution, friction, rotational inertia, projectile motion, momentum, pendulum, and mass-spring oscillation — across translational, rotational, collisional, and oscillatory dynamics, using real-world scenes recorded under controlled protocols. We also introduce a calibration-independent consistency score that quantifies physical violation directly in image space. Across thousands of generations from five state-of-the-art video generators, no model exceeds 0.42 on Principia despite all scoring above 0.7 on VBench. Vision-language models show inverse failure profiles, succeeding where generators fail and vice versa.`,
       abstractHighlights: [
@@ -900,8 +942,8 @@
 }`,
       teaser: 'assets/publications/principia/teaser.mp4',
       links: [
-        { label: 'arXiv (soon)', href: '#', disabled: true },
-        { label: 'Project Page (soon)', href: '#', disabled: true },
+        { label: 'Paper', href: 'https://arxiv.org/abs/2609.04200', icon: 'fas fa-file-pdf', primary: true },
+        { label: 'Project Page', href: 'https://principiabench.github.io/', icon: 'fas fa-globe' },
       ]
     },
     gravity: {
